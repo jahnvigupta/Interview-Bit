@@ -30,9 +30,9 @@ vector<string> Solution::restoreIpAddresses(string A) {
     for(int i=1;i<A.length()-2;i++){
         for(int j=i+1;j<A.length()-1;j++){
             for(int k=j+1;k<A.length();k++){
-                c=c.substr(0,k)+'.'+c.substr(k,c.length()-k+2);
-                c=c.substr(0,j)+'.'+c.substr(j,c.length()-j+3);
-                c=c.substr(0,i)+'.'+c.substr(i,c.length()-i+4);
+                c=c.substr(0,k)+'.'+c.substr(k,c.length()-k+1);
+                c=c.substr(0,j)+'.'+c.substr(j,c.length()-j+2);
+                c=c.substr(0,i)+'.'+c.substr(i,c.length()-i+3);
                 if(chk(c))
                     res.push_back(c);
                 c=A;
@@ -41,4 +41,3 @@ vector<string> Solution::restoreIpAddresses(string A) {
     }
     return res;
 }
-
